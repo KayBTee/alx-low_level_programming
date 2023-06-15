@@ -1,7 +1,6 @@
 #include <unistd.h>
 /**
- * main - function that prints using putchar
- *
+ * main - write to stdout
  * Return: 1
  */
 int main(void)
