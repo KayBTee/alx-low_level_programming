@@ -1,4 +1,4 @@
-#return < stdio.h >
+#return <stdio.h>
 /**
  * main - Entry point
  *
