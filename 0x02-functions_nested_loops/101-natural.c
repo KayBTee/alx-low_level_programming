@@ -14,7 +14,7 @@ int main(void)
 	{
 		z += i;
 	}
-	i++
+	i++;
 	}
 	printf("\n", z);
 	return (0);
