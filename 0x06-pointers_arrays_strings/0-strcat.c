@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * *_strcat - concatenates two strings.
- * @dest: string being appended
+ * *_strcat - concatenates two strings
  * @src: string being appended
+ * @dest: string being appended to
  * Return: dest
  */
 
 char *_strcat(char *dest, char *src)
 {
-	char *ptr = dest
+	char *ptr = dest;
 
 	while (*ptr != '\0')
 	{
@@ -22,5 +22,6 @@ char *_strcat(char *dest, char *src)
 		src++;
 	}
 	*ptr = '\0';
+
 	return (dest);
 }
