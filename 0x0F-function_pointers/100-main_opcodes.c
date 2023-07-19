@@ -11,31 +11,29 @@
 
 int main(int argc, char *argv[])
 {
-	int number_of_bytes;
+	int x, bytes;
+	char *array;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
+	bytes = atoi(argv[1]);
 
-	number_of_bytes = atoi(argv[1]);
-
-	if (number_of_bytes < 0)
+	if (bytes < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
+	array = (char *)main;
 
-	int i;
-	unsigned char *code = (unsigned char *)main;
-
-	for (i = 0; i < number_of_bytes; i++)
+	x = 0;
+	while (x < bytes - 1)
 	{
-		printf("%02x", code[i]);
+		printf("%02hhx ", array[x]);
+		x++;
 	}
-
-	printf("\n");
-
+	printf("%02hhx\n", array[x]);
 	return (0);
 }
