@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <stdio.h>
 #include "function_pointers.h"
 
 /**
@@ -10,16 +10,8 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	char *current = name;
-
 	if (name == NULL || f == NULL)
-	{
-		exit(EXIT_FAILURE);
-	}
+		return;
 
-	while (*current != '\0')
-	{
-		f(current);
-		current++;
-	}
+	f(name);
 }
